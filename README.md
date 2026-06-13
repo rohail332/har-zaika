@@ -16,7 +16,7 @@ Official website for **Har Zaika** featuring recipes from Asian, Chinese, Vegeta
 
 - **HTML5** - Structure and markup
 - **SCSS** - Preprocessed CSS compiled to `dist/main.css`
-- **JavaScript** - Interactive navigation
+- **JavaScript** - Interactivity and dynamic content
 
 ## Features
 
