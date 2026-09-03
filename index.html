@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="dist/main.css" />
   <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
 </head>
 
 <body>
@@ -17,6 +18,7 @@
         <img src="img/icon.png" alt="logo" class="logo-img" />
         <a href="index.html" class="logo-text">Har Zaika</a>
       </div>
+
       <ul class="nav-links">
         <li><a href="#home">home</a></li>
         <li><a href="recipes.html">recipes</a></li>
@@ -24,6 +26,17 @@
         <li><a href="about.html">about</a></li>
         <li><a href="contact.html">contact</a></li>
       </ul>
+
+      <div class="selector-main">
+        <!-- <img src="icons/languages.png" alt=""> -->
+         <i class="fa fa-language"></i>
+        <div class="selector-lang">
+          <button><span class="fi fi-gb"></span> English</button>
+          <button class="urdu"><span class="fi fi-pk"></span> اُردُو</button>
+          <button class="urdu"><span class="fi fi-ir"></span> فارسی</button>
+        </div>
+      </div>
+
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -32,8 +45,9 @@
     </nav>
   </header>
   <main>
-    <section id="home" class="hero-section">
 
+    <!-- hero section -->
+    <section id="home" class="hero-section">
       <div class="img-sec">
         <img src="img/ch.png" alt="hero-section-img" class="hero-img">
       </div>
@@ -49,36 +63,9 @@
           </svg></button>
       </div>
 
+      <!-- top recipes section -->
     </section>
     <section id="recipes" class="recipes-section">
-      <span>Browse By Category</span>
-      <div class="cate">
-        <div class="food desi home">
-          <img src="img/des.png" alt="desi-food" class="dest-img" loading="lazy">
-          <h3 class="food-name">asian</h3>
-        </div>
-        <div class="food chin home">
-          <img src="img/chn.png" alt="chinese-food" class="chinese-img" loading="lazy">
-          <h3 class="food-name">chinese</h3>
-        </div>
-        <div class="food veg home">
-          <img src="img/vegs.png" alt="Vegetarian-food" class="vegetarian-img" loading="lazy">
-          <h3 class="food-name">Vegetarian</h3>
-        </div>
-        <div class="food des home">
-          <img src="img/Dessert.png" alt="Dessert" class="Dessert" loading="lazy">
-          <h3 class="food-name">Dessert</h3>
-        </div>
-        <div class="food fff home">
-          <img src="img/fast.png" alt="fast-food" class="fast-food-img" loading="lazy">
-          <h3 class="food-name">fast food</h3>
-        </div>
-        <div class="food dri home">
-          <img src="img/der.png" alt="drinks" class="drinks" loading="lazy">
-          <h3 class="food-name">drinks</h3>
-        </div>
-      </div>
-
       <div class="recipes">
         <h4>Recipes</h4>
         <h1 class="heading">Our Top Rate Recipes</h1>
@@ -92,11 +79,8 @@
             <hr>
             <div class="det">
               <span><i class="fa fa-clock-o" style="font-size:20px;"></i> 40 min</span>
-              <span><a class="view" href="Recipes/Chicken-Karahi.html">View Recipe<svg
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                      d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                  </svg></a></span>
+              <span><a class="view" href="Recipes/Chicken-Karahi.html">View Recipe <i class="fa fa-arrow-right"></i>
+                </a></span>
             </div>
           </div>
           <div class="item">

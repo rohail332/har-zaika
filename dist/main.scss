@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
 $btn-color: #1f2937;
 $hover-color: #e63946;
 $cap-color: #fff8f1;
+// $Urdu-font: "Gulzar";
+$Urdu-font: "Noto Nastaliq Urdu";
 
 @mixin cap {
     background-color: $cap-color;
@@ -56,13 +61,13 @@ header {
     left: 0;
     z-index: 1000;
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid#dadada;
+    border-bottom: 1px solid #dadada59;
 
     nav {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: 1.2rem 2rem;
 
         .logo {
             display: flex;
@@ -83,7 +88,7 @@ header {
             }
         }
 
-        ul {
+        .nav-links {
             display: flex;
 
             li {
@@ -120,6 +125,47 @@ header {
                 }
             }
         }
+
+        .selector-main {
+            i {
+                cursor: pointer;
+                color: $btn-color;
+                font-size: 25px;
+                 color: $hover-color;
+            }
+            .selector-lang {
+                display: none;
+                margin-top: 1rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                background-color: $cap-color;
+                border-radius: 4px;
+                z-index: 1000;
+                gap: 0.5rem;
+
+
+                button {
+                    border: none;
+                    border-radius: 6px;
+                    padding: 3px 8px;
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    color: $btn-color;
+                    background-color: transparent;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: #ffeedd;
+                    }
+                }
+            }
+
+            &.open .selector-lang {
+                display: flex;
+            }
+        }
     }
 
     .hamburger {
@@ -151,7 +197,8 @@ header {
         margin-right: 3.6rem;
         transition: all 0.3s ease;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             transform: scale(1.02);
         }
     }
@@ -1224,22 +1271,23 @@ footer {
     }
 }
 
- #toast {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: #2e7d32;
-      color: #fff;
-      padding: 14px 26px;
-      border-radius: 8px;
-      font-size: 15px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s, transform 0.4s;
-      z-index: 9999;
-    }
-    #toast.show{
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+#toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #2e7d32;
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 9999;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
