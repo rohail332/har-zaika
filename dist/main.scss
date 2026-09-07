@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 $btn-color: #1f2937;
 $hover-color: #e63946;
 $cap-color: #fff8f1;
 // $Urdu-font: "Gulzar";
 $Urdu-font: "Noto Nastaliq Urdu";
+$style-font: "Caveat";
 
 @mixin cap {
     background-color: $cap-color;
@@ -79,9 +81,10 @@ header {
             }
 
             .logo-text {
-                font-size: 1.5rem;
-                font-weight: bold;
+                font-size: 1.6rem;
+                font-weight: bolder;
                 margin-left: 0.3rem;
+                font-family: $style-font;
                 text-decoration: none;
                 letter-spacing: 0.3px;
                 color: $hover-color;
@@ -126,13 +129,15 @@ header {
             }
         }
 
+        // language section
         .selector-main {
             i {
                 cursor: pointer;
                 color: $btn-color;
                 font-size: 25px;
-                 color: $hover-color;
+                color: $hover-color;
             }
+
             .selector-lang {
                 display: none;
                 margin-top: 1rem;
@@ -145,14 +150,19 @@ header {
                 z-index: 1000;
                 gap: 0.5rem;
 
-
-                button {
+                //    .urdu{
+                //     font-family: $Urdu-font;
+                // }
+                .lang-btn {
                     border: none;
                     border-radius: 6px;
                     padding: 3px 8px;
                     cursor: pointer;
-                    font-size: 0.8rem;
+                    font-weight: bolder;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.04rem;
                     color: $btn-color;
+                    // font-family: $style-font;
                     background-color: transparent;
                     transition: all 0.3s ease;
 
@@ -183,51 +193,79 @@ header {
     }
 }
 
+// hero section
+
 .hero-section {
-    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 100px;
+    padding-left: 135px;
     height: 100vh;
     background-color: $cap-color;
 
-    img {
-        width: 31vw;
-        margin-right: 3.6rem;
-        transition: all 0.3s ease;
-        cursor: pointer;
+    .leaf {
+        position: absolute;
+        z-index: 100;
+        width: 8rem;
+        left: -34px;
+        top: 43px;
+        transform: rotate(84deg);
+    }
 
-        &:hover {
-            transform: scale(1.02);
+    .leaf2 {
+        position: absolute;
+        z-index: 100;
+        width: 8rem;
+        left: -34px;
+        top: 500px;
+        transform: rotate(25deg);
+    }
+
+    .img-sec {
+        margin-right: 2rem;
+
+        img {
+            width: 39vw;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 3rem;
+
+            // &:hover {
+            //     transform: scale(1.02);
+            // }
         }
     }
 
+
     h1 {
-        font-size: 3.6rem;
+        font-size: 3.3rem;
+        margin-top: 2.5rem;
         width: 70%;
         line-height: 1.3;
 
         span {
             color: $hover-color;
+            font-family: $style-font;
+            font-size: 3.6rem;
         }
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.98rem;
         margin: 10px 0;
         width: 70%;
         letter-spacing: 0.4px;
         line-height: 1.6;
+        color: rgb(73, 73, 73);
     }
 
     .hero-btn {
         cursor: pointer;
         background-color: $hover-color;
         border: none;
-        border-radius: 8px;
-        padding: 12px 18px;
-        font-size: 1.13rem;
+        border-radius: 3rem;
+        padding: 10px 28px;
+        font-size: 1rem;
         color: white;
         font-weight: 600;
         text-align: center;
