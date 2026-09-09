@@ -31,6 +31,21 @@ $style-font: "Caveat";
     transition: all 0.3s ease;
 }
 
+@mixin Recipesbtn {
+    background: linear-gradient(135deg, $hover-color, #c1121f);
+    color: #fff;
+    border-radius: 22px;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
 @mixin style {
     color: $hover-color;
     font-family: $style-font;
@@ -41,6 +56,10 @@ $style-font: "Caveat";
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.style {
+    @include style()
 }
 
 html {
@@ -317,10 +336,6 @@ header {
     padding: 50px;
     text-align: center;
 
-    .style {
-        @include style()
-    }
-
     .cate {
         display: flex;
         flex-wrap: wrap;
@@ -460,21 +475,12 @@ header {
 
                 .view-btn {
                     .view {
-                        background: linear-gradient(135deg, $hover-color, #c1121f);
-                        color: #fff;
-                        border: none;
-                        border-radius: 50px;
+                        @include Recipesbtn();
                         margin-top: 1.5rem;
-                        padding: 10px 30px;
-                        font-size: 0.97rem;
-                        font-weight: 700;
-                        cursor: pointer;
-                        letter-spacing: 0.8px;
-                        width: 100%;
-                        transition: all 0.3s ease;
 
                         &:hover {
-                            transform: translateY(-3px);
+                            opacity: 0.9;
+                            letter-spacing: 1px;
                         }
                     }
                 }
@@ -587,18 +593,7 @@ header {
                     padding: 0 18px 16px;
 
                     .view {
-                        background: linear-gradient(135deg, $hover-color, #c1121f);
-                        color: #fff;
-                        border-radius: 22px;
-                        border: none;
-                        font-size: 0.9rem;
-                        cursor: pointer;
-                        letter-spacing: 0.5px;
-                        font-weight: 700;
-                        margin-top: 10px;
-                        width: 100%;
-                        padding: 8px;
-                        transition: all 0.3s ease;
+                        @include Recipesbtn();
 
                         &:hover {
                             opacity: 0.9;
@@ -770,11 +765,16 @@ header {
 }
 
 .news-letter {
-    background-color: $cap-color;
-    padding: 3rem 5rem 4rem;
+    background: url(/img/ban.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    // width: 100%
     margin: 3rem;
-    border-radius: 6px;
+    padding: 3rem 5rem 4rem;
     text-align: center;
+
 
     p {
         font-size: 1.1rem;
@@ -798,34 +798,45 @@ header {
     }
 
     .sub {
-        input {
-            padding: 13px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-            margin-top: 1.4rem;
-            width: 300px;
-            outline: none;
-        }
+        border: 1px solid #ccc;
+        border-radius: 3rem;
+        background-color: white;
+        width: 30rem;
+        margin: auto;
 
-        button {
-            cursor: pointer;
-            background-color: $hover-color;
-            border: none;
-            border-radius: 6px;
-            padding: 12px 18px;
-            font-size: 1.1rem;
-            color: white;
-            font-weight: 600;
-            margin-left: 6px;
-            text-align: center;
-            transition: all 0.3s ease;
+        #newsletter-form {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
 
-            &:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 1px 6px $hover-color;
+            input {
+                padding: 13px;
+                border-radius: 3rem;
+                border: none;
+                font-size: 1rem;
+                width: 300px;
+                outline: none;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: $hover-color;
+                border: none;
+                border-radius: 3rem;
+                padding: 9px 18px;
+                font-size: 1rem;
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateX(3px);
+                    opacity: 0.9;
+                }
             }
         }
+
     }
 }
 
