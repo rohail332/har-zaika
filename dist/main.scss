@@ -516,8 +516,7 @@ header {
 
                 &:hover {
                     transform: translateY(-10px);
-                    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.18);
-                    border-color: rgba(230, 57, 70, 0.2);
+                    border-color: rgba(230, 57, 71, 0.363);
                 }
 
                 .img-wrap {
@@ -628,11 +627,138 @@ header {
 }
 
 .blog-section {
-    margin-top: 2rem;
+    padding: 60px 50px 20px;
     text-align: center;
+
+    h5 {
+        color: $hover-color;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
 
     h1 {
         @include heading();
+    }
+
+    p {
+        @include headingPara();
+        margin-bottom: 0;
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+        margin-bottom: 2.5rem;
+
+        .blog-1 {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                transform: translateY(-8px);
+                border-color: rgba(230, 57, 71, 0.363);
+            }
+
+            .blog-img-wrap {
+                position: relative;
+                overflow: hidden;
+
+                .blog-img {
+                    width: 100%;
+                    height: 210px;
+                    object-fit: cover;
+                    display: block;
+                    transition: transform 0.5s ease;
+                }
+
+                .blog-tag {
+                    position: absolute;
+                    top: 14px;
+                    left: 14px;
+                    background: $hover-color;
+                    color: #fff;
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    letter-spacing: 0.8px;
+                    padding: 5px 12px;
+                    border-radius: 50px;
+                    text-transform: uppercase;
+
+                    i {
+                        margin-right: 4px;
+                    }
+                }
+            }
+
+            &:hover .blog-img-wrap .blog-img {
+                transform: scale(1.06);
+            }
+
+            .blog-body {
+                padding: 20px 22px 22px;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 10px;
+
+                .blog-meta {
+                    display: flex;
+                    gap: 14px;
+                    justify-content: space-between;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-size: 0.79rem;
+                        font-weight: 600;
+                        color: #666666;
+
+                        i {
+                            color: $hover-color;
+                        }
+                    }
+                }
+
+                h3 {
+                    font-size: 1.15rem;
+                    font-weight: 800;
+                    color: $hover-color;
+                    line-height: 1.4;
+                    transition: color 0.3s;
+                }
+
+                p {
+                    font-size: 0.88rem;
+                    color: #777;
+                    line-height: 1.65;
+                    flex: 1;
+                    margin: 0;
+                    opacity: 1;
+                }
+
+                .read-btn {
+                   @include Recipesbtn();
+
+                   &:hover{
+                    opacity: 0.9;
+                    letter-spacing: 1px;
+                   }
+                }
+            }
+        }
     }
 
     .blog-btn {
@@ -644,121 +770,11 @@ header {
             vertical-align: middle;
             transition: transform 0.3s ease;
             width: 16px;
-            fill: rgba(255, 255, 255, 0.884);
+            fill: $hover-color;
         }
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 1px 6px $hover-color;
-
-            svg {
-                transform: translateX(5px);
-            }
-        }
-    }
-
-    .blogs {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 20px;
-        place-items: center;
-        padding: 0 50px 50px;
-        margin-top: 40px;
-
-        .blog-1 {
-            border-radius: 8px;
-            text-align: center;
-            letter-spacing: 0.4px;
-            padding: 15px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.247);
-            transition: all 0.3s ease;
-
-            .date {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-                color: $btn-color;
-                font-size: 0.95rem;
-
-                .cap {
-                    color: $hover-color;
-                    font-weight: 600;
-                    font-size: 1.01rem;
-                }
-
-                img {
-                    width: 15px;
-                    object-fit: cover;
-                }
-            }
-
-            h3 {
-                margin-top: 6px;
-                font-size: 1.3rem;
-                width: 90%;
-                padding: 0 10px;
-                line-height: 1.3;
-                text-align: start;
-                color: $hover-color;
-            }
-
-            p {
-                margin-top: 10px;
-                font-size: 1rem;
-                color: $btn-color;
-                padding: 0 10px;
-                opacity: 80%;
-                line-height: 1.5;
-                letter-spacing: 0.5px;
-                text-align: start;
-            }
-
-            .more-div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-                margin-top: 15px;
-
-                span {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                    font-size: 0.95rem;
-                    color: $btn-color;
-                    font-weight: 600;
-
-                    img {
-                        width: 18px;
-                        object-fit: cover;
-                    }
-                }
-
-                a {
-                    text-decoration: none;
-                    color: $hover-color;
-                    font-weight: 600;
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        .blog-1:hover {
-            box-shadow: 0 4px 8px rgba(15, 15, 15, 0.281);
-            transform: scale(1.04);
-        }
-
-        .blog-img {
-            width: 100%;
-            height: 200px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .icons-img {
-            width: 20px;
-            object-fit: cover;
+        &:hover svg {
+            transform: translateX(4px);
         }
     }
 
@@ -770,7 +786,6 @@ header {
     background-position: center;
     background-size: cover;
     border-radius: 25px;
-    // width: 100%
     margin: 3rem;
     padding: 3rem 5rem 4rem;
     text-align: center;
@@ -831,7 +846,7 @@ header {
                 transition: all 0.3s ease;
 
                 &:hover {
-                    transform: translateX(3px);
+                    transform: translateX(4px);
                     opacity: 0.9;
                 }
             }
@@ -1081,11 +1096,9 @@ footer {
     }
 
     .blog-section {
-
         .blogs {
             grid-template-columns: 1fr;
-            padding: 0 30px 30px;
-            gap: 20px;
+            padding: 0;
         }
     }
 
