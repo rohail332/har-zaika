@@ -1164,24 +1164,23 @@ footer {
 }
 
 .blog-heading {
-    background-color: $cap-color;
-    padding: 9rem 8rem 5rem;
+    background: url(/img/ban.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9rem 1rem;
     text-align: center;
     margin-bottom: 4rem;
 
     h1 {
         @include heading();
-        font-size: 3rem;
+        font-size: 4rem;
+        font-family: $style-font;
+        color: $hover-color;
     }
 
     p {
-        font-size: 1.2rem;
-        color: $btn-color;
-        text-align: center;
-        opacity: 70%;
-        margin-top: 12px;
-        margin-bottom: 15px;
-        letter-spacing: 0.5px;
+       @include headingPara();
     }
 
     @media only screen and (max-width: 768px) {
