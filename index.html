@@ -61,7 +61,7 @@
       </div>
       <img class="leaf2" src="img/l.png" alt="leaf-img">
       <div class="img-sec">
-        <img src="img/hero.png" alt="hero-section-img" class="hero-img" loading="lazy">
+        <img src="img/hero1.png" alt="hero-section-img" class="hero-img" loading="lazy">
       </div>
     </section>
 
@@ -81,6 +81,7 @@
 
         <div class="best-item">
           <div class="rightSide">
+            <img class="leaf-in" src="img/l.png" alt="">
             <div class="pill">
               <i class="fa fa-spoon"></i>
               <h1>CHEF'S PICK</h1>
@@ -96,7 +97,9 @@
             </div>
             <div class="view-btn"><button class="view">View Recipe</button></div>
           </div>
-
+          <div class="left">
+            <img src="img/hero1.png" alt="">
+          </div>
         </div>
         <div class="items">
 
@@ -107,11 +110,12 @@
               <p>Classic salad with tomatoes, cucumbers, onions, olives and feta.</p>
             </div>
             <div class="det">
-              <span><i class="fa fa-clock-o"></i> 40 min</span>
+              <span><i class="fa fa-clock-o"></i> 10 min</span>
               <span><i class="fa fa-users"></i> Servings: 4</span>
               <span><i class="fa fa-star"></i> 4.3</span>
             </div>
-            <div class="view-btn"><button class="view">View Recipe</button></div>
+            <div class="view-btn"><button class="view" onclick="location.href='Recipes/Greek-Salad.html'">View
+                Recipe</button></div>
           </div>
           <div class="item">
             <div class="img-wrap"><img src="img/man.png" alt="Manchurian" loading="lazy"></div>
@@ -120,11 +124,12 @@
               <p>Crispy vegetable or chicken balls tossed in a spicy, tangy sauce.</p>
             </div>
             <div class="det">
-              <span><i class="fa fa-clock-o"></i> 40 min</span>
-              <span><i class="fa fa-users"></i> Servings: 4</span>
+              <span><i class="fa fa-clock-o"></i> 25 min</span>
+              <span><i class="fa fa-users"></i> Servings: 5</span>
               <span><i class="fa fa-star"></i> 4.3</span>
             </div>
-            <div class="view-btn"><button class="view">View Recipe</button></div>
+            <div class="view-btn"><button class="view" onclick="location.href='Recipes/Manchurian.html'">View
+                Recipe</button></div>
           </div>
           <div class="item">
             <div class="img-wrap"><img src="img/wwa.jpg" alt="Infused Water" loading="lazy"></div>
@@ -133,11 +138,12 @@
               <p>A healthy calorie free drink bursting with natural fruit essence.</p>
             </div>
             <div class="det">
-              <span><i class="fa fa-clock-o"></i> 40 min</span>
-              <span><i class="fa fa-users"></i> Servings: 4</span>
-              <span><i class="fa fa-star"></i> 4.3</span>
+              <span><i class="fa fa-clock-o"></i> 10 min</span>
+              <span><i class="fa fa-users"></i> Servings: 3</span>
+              <span><i class="fa fa-star"></i> 3.9</span>
             </div>
-            <div class="view-btn"><button class="view">View Recipe</button></div>
+            <div class="view-btn"><button class="view" onclick="location.href='Recipes/Infused-Water.html'">View
+                Recipe</button></div>
           </div>
           <div class="item">
             <div class="img-wrap"><img src="img/sou.png" alt="Manchow-Soup" loading="lazy"></div>
@@ -146,11 +152,12 @@
               <p>Spicy soup with vegetables, noodles and a hint of garlic.</p>
             </div>
             <div class="det">
-              <span><i class="fa fa-clock-o"></i> 40 min</span>
+              <span><i class="fa fa-clock-o"></i> 33 min</span>
               <span><i class="fa fa-users"></i> Servings: 4</span>
-              <span><i class="fa fa-star"></i> 4.3</span>
+              <span><i class="fa fa-star"></i> 4.0</span>
             </div>
-            <div class="view-btn"><button class="view">View Recipe</button></div>
+            <div class="view-btn"><button class="view" onclick="location.href='Recipes/ManchowSoup.html'">View
+                Recipe</button></div>
           </div>
         </div>
         <button class="Recipes-btn" onclick="location.href='recipes.html'">View All <svg
@@ -162,7 +169,6 @@
     </section>
 
     <section id="blog" class="blog-section">
-      <h5>From The Kitchen</h5>
       <h1 class="heading">Blogs & <span class="style">Cooking Tips</span></h1>
       <p>Explore expert kitchen secrets and community-approved techniques.</p>
       <div class="blogs">
@@ -178,8 +184,11 @@
               <span><i class="fa fa-clock-o"></i> 4 min read</span>
             </div>
             <h3>6 simple tips to reduce your blood pressure</h3>
-            <p>When the guidelines defining high blood pressure were lowered by the American Heart Association and the American College of Cardiology in 2017...</p>
-            <button class="read-btn">Read More</button>
+            <p>When the guidelines defining high blood pressure were lowered by the American Heart Association and the
+              American College of Cardiology in 2017...</p>
+            <button class="read-btn"
+              onclick="window.open('https://www.health.harvard.edu/staying-healthy/6-simple-tips-to-reduce-your-blood-pressure','_blank')">Read
+              More</button>
           </div>
         </div>
 
@@ -194,8 +203,11 @@
               <span><i class="fa fa-clock-o"></i> 5 min read</span>
             </div>
             <h3>Plant-based diets might fight leg or lung blood clots</h3>
-            <p>Eating a plant-based diet rich in legumes, whole grains, colorful fruits and vegetables, nuts and seeds is tied to lower risks for many diseases...</p>
-            <button class="read-btn">Read More</button>
+            <p>Eating a plant-based diet rich in legumes, whole grains, colorful fruits and vegetables, nuts and seeds
+              is tied to lower risks for many diseases...</p>
+            <button class="read-btn"
+              onclick="window.open('https://www.health.harvard.edu/nutrition/plant-based-diets-might-fight-leg-or-lung-blood-clots','_blank')">Read
+              More</button>
           </div>
         </div>
 
@@ -210,13 +222,20 @@
               <span><i class="fa fa-clock-o"></i> 3 min read</span>
             </div>
             <h3>Can your coffee habit help you live longer?</h3>
-            <p>Coffee contains antioxidants which help protect cells from damage. Studies show coffee has a protective effect against some cancers and more...</p>
-            <button class="read-btn">Read More</button>
+            <p>Coffee contains antioxidants which help protect cells from damage. Studies show coffee has a protective
+              effect against some cancers and more...</p>
+            <button class="read-btn"
+              onclick="window.open('https://www.health.harvard.edu/blog/can-your-coffee-habit-help-you-live-longer-201601068938','_blank')">Read
+              More</button>
           </div>
         </div>
 
       </div>
-      <button class="blog-btn" onclick="location.href='blog.html'">View All Articles <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
+      <button class="blog-btn" onclick="location.href='blog.html'">View All Articles <svg
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+        </svg></button>
     </section>
 
     <section class="news-letter">

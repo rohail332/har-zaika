@@ -27,7 +27,7 @@ $style-font: "Caveat";
     font-size: 1.13rem;
     color: $btn-color;
     font-weight: 600;
-    text-align: right !important;
+    text-align: left !important;
     transition: all 0.3s ease;
 }
 
@@ -379,24 +379,38 @@ header {
             @include headingPara()
         }
 
+        .stylee {
+            @include style();
+        }
+
         // best item 
         .best-item {
             display: flex;
-            justify-content: left;
+            justify-content: space-between;
             align-items: center;
-            background: url(/img/bb.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            background-color: $cap-color;
             border-radius: 25px;
             margin-top: 3rem;
-            width: 100%;
+
+            .left {
+                img {
+                    width: 400px;
+                }
+            }
 
             .rightSide {
-                width: 500px;
+                .leaf-in {
+                    width: 2.7rem;
+                    transform: rotate(90deg);
+                    top: 153%;
+                    left: 62px;
+                    position: absolute;
+                }
+
+                width: 520px;
                 text-align: left;
                 padding: 60px;
-                margin-left: 130px;
+                margin-left: 1rem;
 
                 .pill {
                     display: inline-flex;
@@ -429,7 +443,6 @@ header {
                         font-size: 2.2rem;
                         font-weight: 800;
                         color: $hover-color;
-                        // font-family: $style-font;
                         line-height: 1.2;
                         margin-bottom: 0.6rem;
 
@@ -483,15 +496,6 @@ header {
                             letter-spacing: 1px;
                         }
                     }
-                }
-            }
-
-            .item-img {
-                img {
-                    width: 100%;
-                    height: 320px;
-                    object-fit: cover;
-                    border-radius: 12px;
                 }
             }
         }
@@ -606,9 +610,13 @@ header {
         .Recipes-btn {
             @include btn();
             margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
 
             svg {
-                margin-left: 6px;
+                margin-left: 8px;
                 vertical-align: middle;
                 transition: transform 0.3s ease;
                 width: 16px;
@@ -750,12 +758,12 @@ header {
                 }
 
                 .read-btn {
-                   @include Recipesbtn();
+                    @include Recipesbtn();
 
-                   &:hover{
-                    opacity: 0.9;
-                    letter-spacing: 1px;
-                   }
+                    &:hover {
+                        opacity: 0.9;
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }
@@ -764,17 +772,24 @@ header {
     .blog-btn {
         @include btn();
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
 
         svg {
-            margin-left: 6px;
+            margin-left: 8px;
             vertical-align: middle;
             transition: transform 0.3s ease;
             width: 16px;
             fill: $hover-color;
         }
 
-        &:hover svg {
-            transform: translateX(4px);
+        &:hover {
+            transform: translateX(2px);
+
+            svg {
+                transform: translateX(2px);
+            }
         }
     }
 
@@ -882,9 +897,10 @@ footer {
             }
 
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
                 font-weight: 800;
                 color: $hover-color;
+                font-family: $style-font;
                 text-decoration: none;
             }
         }
@@ -968,7 +984,9 @@ footer {
             a {
                 color: $hover-color;
                 text-decoration: none;
-                font-weight: 600;
+                font-family: $style-font;
+                font-weight: 800;
+                font-family: 1.2rem;
             }
         }
     }
@@ -1000,7 +1018,7 @@ footer {
 
         .nav-links {
             position: fixed;
-            top: 80px;
+            top: 70px;
             right: -100%;
             width: 100%;
             height: calc(100vh - 80px);
@@ -1009,7 +1027,8 @@ footer {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding-top: 1rem;
+            padding-top: 2rem;
+            gap: 2rem;
             transition: right 0.3s ease;
             z-index: 999;
             border-bottom: 1px solid $hover-color;
@@ -1060,9 +1079,10 @@ footer {
         }
 
         .hero-btn {
-            padding: 12px 16px;
+            padding: 12px 30px;
+            display: flex;
             font-size: 1rem;
-            margin-bottom: 1.3rem;
+            margin: 1.5rem auto 3rem auto;
         }
 
         p {
@@ -1078,7 +1098,15 @@ footer {
         padding: 3rem 2rem;
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+
+            span {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: 0.95rem;
         }
 
         button {
@@ -1086,11 +1114,23 @@ footer {
         }
 
         .sub {
-            margin-top: 20px;
+            margin: 20px auto 0 auto;
+            background-color: transparent;
+            border: none;
+            width: auto;
 
+            #newsletter-form {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
 
-            input {
-                width: 200px;
+                input {
+                    width: 260px;
+                }
+
+                button {
+                    width: 260px;
+                }
             }
         }
     }
@@ -1180,7 +1220,7 @@ footer {
     }
 
     p {
-       @include headingPara();
+        @include headingPara();
     }
 
     @media only screen and (max-width: 768px) {
@@ -1242,9 +1282,15 @@ footer {
 
     .tea-hh {
         text-align: center;
-        font-size: 2.5rem;
-        color: $hover-color;
+        font-size: 2.4rem;
+        color: $btn-color;
         margin-bottom: 1rem;
+
+        .stylee {
+            color: $hover-color;
+            font-family: $style-font;
+            font-size: 3.1rem;
+        }
     }
 
     .team-grid {
@@ -1277,13 +1323,13 @@ footer {
 
             h3 {
                 font-size: 1.5rem;
-                color: $btn-color;
+                color: $hover-color;
                 margin-bottom: 0.5rem;
             }
 
             .role {
                 font-weight: 600;
-                color: $hover-color;
+                color: $btn-color;
                 margin-bottom: 1rem;
                 font-size: 1rem;
             }
@@ -1522,4 +1568,72 @@ footer {
 #toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .recipes-section {
+        padding: 20px;
+
+        .cate {
+            gap: 16px;
+
+            .food img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .food .food-name {
+                font-size: 0.9rem;
+            }
+        }
+
+        .recipes {
+            margin-top: 2rem;
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .best-item {
+                flex-direction: column-reverse;
+                border-radius: 16px;
+
+                .left {
+                    width: 100%;
+
+                    img {
+                        width: 87%;
+                        margin-top: 20px;
+                    }
+                }
+
+                .rightSide {
+                    width: 100%;
+                    padding: 24px 20px;
+                    margin-left: 0;
+                    margin-top: 10px;
+
+                    .leaf-in {
+                        display: none;
+                    }
+
+                    .item-name h2 {
+                        font-size: 1.6rem;
+                    }
+
+                    .det {
+                        flex-wrap: wrap;
+                        gap: 0.2rem;
+                    }
+
+                    .view-btn .view {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+
+        }
+    }
 }

@@ -1,3 +1,12 @@
+const selectorMain = document.querySelector(".selector-main");
+if (selectorMain) {
+  selectorMain.addEventListener("click", (e) => {
+    e.stopPropagation();
+    selectorMain.classList.toggle("open");
+  });
+  document.addEventListener("click", () => selectorMain.classList.remove("open"));
+}
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navLinksItems = document.querySelectorAll(".nav-links a");
@@ -24,6 +33,7 @@ let Vegetarian = document.getElementsByClassName("veg")[0];
 let Dessert = document.getElementsByClassName("des")[0];
 let fastfood = document.getElementsByClassName("fff")[0];
 let drinks = document.getElementsByClassName("dri")[0];
+let Breakfast = document.getElementsByClassName("fbb")[0];
 
 // items var
 let desi = document.querySelectorAll(".de");
@@ -32,6 +42,7 @@ let Vege = document.querySelectorAll(".vv");
 let Dess = document.querySelectorAll(".dd");
 let fast = document.querySelectorAll(".ff");
 let drink = document.querySelectorAll(".ww");
+let breakfast = document.querySelectorAll(".bfb");
 
 // Hide all categories
 function hideAll() {
@@ -41,6 +52,7 @@ function hideAll() {
   Dess.forEach((item) => (item.style.display = "none"));
   fast.forEach((item) => (item.style.display = "none"));
   drink.forEach((item) => (item.style.display = "none"));
+  breakfast.forEach((item) => (item.style.display = "none"));
 }
 
 // Show selected category
@@ -77,14 +89,11 @@ drinks.addEventListener("click", () => {
   hideAll();
   showItems(drink);
 });
-
-let homed = document.querySelectorAll(".home");
-
-homed.forEach((item) => {
-  item.addEventListener("click", () => {
-    window.location.href = "recipes.html";
-  });
+Breakfast.addEventListener("click", () => {
+  hideAll();
+  showItems(breakfast);
 });
+
 
 const newsletterForm = document.getElementById("newsletter-form");
 const toast = document.getElementById("toast");
