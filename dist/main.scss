@@ -313,7 +313,7 @@ header {
 .moving-bar {
     background-color: $hover-color;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     padding: 16px 0;
     transform: rotate(-1.5deg);
 
@@ -345,6 +345,8 @@ header {
 
         .food {
             cursor: pointer;
+            // background-color: $cap-color;
+            // border-radius: 4.5rem 4.5rem 6px 6px;
 
             img {
                 width: 150px;
@@ -363,7 +365,8 @@ header {
                 margin-top: 10px;
                 font-size: 1.2rem;
                 text-transform: capitalize;
-                color: $btn-color;
+                // color: $hover-color;
+
             }
         }
     }
@@ -382,124 +385,6 @@ header {
         .stylee {
             @include style();
         }
-
-        // best item 
-        .best-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: $cap-color;
-            border-radius: 25px;
-            margin-top: 3rem;
-
-            .left {
-                img {
-                    width: 400px;
-                }
-            }
-
-            .rightSide {
-                .leaf-in {
-                    width: 2.7rem;
-                    transform: rotate(90deg);
-                    top: 153%;
-                    left: 62px;
-                    position: absolute;
-                }
-
-                width: 520px;
-                text-align: left;
-                padding: 60px;
-                margin-left: 1rem;
-
-                .pill {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 6px;
-                    background: rgba(230, 57, 70, 0.1);
-                    border: 1.5px solid rgba(230, 57, 70, 0.25);
-                    border-radius: 50px;
-                    padding: 5px 18px;
-                    width: fit-content;
-                    margin-bottom: 1rem;
-
-                    h1 {
-                        // color: $hover-color;
-                        color: $btn-color;
-                        font-size: 0.7rem;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                    }
-
-                    i {
-                        color: $hover-color;
-                        font-size: 0.8rem;
-                    }
-                }
-
-                .item-name {
-
-                    h2 {
-                        font-size: 2.2rem;
-                        font-weight: 800;
-                        color: $hover-color;
-                        line-height: 1.2;
-                        margin-bottom: 0.6rem;
-
-                        span {
-                            color: $hover-color;
-                        }
-                    }
-
-                    p {
-                        font-size: 1rem;
-                        color: #535353;
-                        line-height: 1;
-                        letter-spacing: 0.2px;
-                        max-width: 420px;
-                    }
-                }
-
-                .det {
-                    display: flex;
-                    gap: 1.2rem;
-
-                    span {
-                        display: flex;
-                        align-items: center;
-                        gap: 6px;
-                        font-size: 0.82rem;
-                        font-weight: 600;
-                        letter-spacing: 0.4px;
-                        color: $btn-color;
-                        margin: auto;
-                        margin-top: 1rem;
-                        background: rgba(230, 57, 70, 0.1);
-                        border: 1px solid rgba(230, 57, 70, 0.25);
-                        padding: 5px 18px;
-                        border-radius: 50px;
-
-                        i {
-                            color: $hover-color;
-                            font-size: 1rem;
-                        }
-                    }
-                }
-
-                .view-btn {
-                    .view {
-                        @include Recipesbtn();
-                        margin-top: 1.5rem;
-
-                        &:hover {
-                            opacity: 0.9;
-                            letter-spacing: 1px;
-                        }
-                    }
-                }
-            }
-        }
-
 
         .items {
             display: grid;
@@ -526,6 +411,23 @@ header {
                 .img-wrap {
                     position: relative;
                     overflow: hidden;
+
+                    .chef-tag {
+                        position: absolute;
+                        top: 8px;
+                        left: 10px;
+                        background: $hover-color;
+                        color: #fff;
+                        font-size: 0.72rem;
+                        font-weight: 700;
+                        letter-spacing: 0.8px;
+                        padding: 5px 12px;
+                        border-radius: 50px;
+
+                        i {
+                            margin-right: 4px;
+                        }
+                    }
 
                     img {
                         width: 100%;
@@ -986,7 +888,8 @@ footer {
                 text-decoration: none;
                 font-family: $style-font;
                 font-weight: 800;
-                font-family: 1.2rem;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
             }
         }
     }
