@@ -10,7 +10,7 @@ $Urdu-font: "Noto Nastaliq Urdu";
 $style-font: "Caveat";
 
 @mixin heading {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: $btn-color;
 }
@@ -22,12 +22,15 @@ $style-font: "Caveat";
 
 @mixin btn {
     cursor: pointer;
-    background-color: transparent;
     border: none;
-    font-size: 1.13rem;
-    color: $btn-color;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: $hover-color;
+    color: #fff;
+    border-radius: 22px;
+    letter-spacing: 0.7px;
     font-weight: 600;
-    text-align: left !important;
     transition: all 0.3s ease;
 }
 
@@ -313,7 +316,7 @@ header {
 .moving-bar {
     background-color: $hover-color;
     width: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     padding: 16px 0;
     transform: rotate(-1.5deg);
 
@@ -511,30 +514,122 @@ header {
 
         .Recipes-btn {
             @include btn();
-            margin-top: 2rem;
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-
-
-            svg {
-                margin-left: 8px;
-                vertical-align: middle;
-                transition: transform 0.3s ease;
-                width: 16px;
-                fill: $hover-color;
-            }
+            margin-top: 3.3rem;
 
             &:hover {
-                transform: translateX(2px);
+                opacity: 0.9;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
 
-                svg {
-                    transform: translateX(2px);
+// testimonial
+.testimonial {
+    padding: 60px 50px 40px;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    overflow: hidden;
+    background-color: $cap-color;
+
+    h1 {
+        @include heading();
+    }
+
+    p {
+        @include headingPara();
+        margin-bottom: 0;
+    }
+
+    .mainn {
+        position: relative;
+        left: -98%;
+    }
+
+    .main {
+        margin-top: 2.5rem;
+        width: 200%;
+        overflow: hidden;
+        display: flex;
+        gap: 1.5rem;
+
+        .testimonial-inner {
+            padding: 1.5rem;
+            border-radius: 14px;
+            border: 1px solid rgba(230, 57, 71, 0.2);
+            box-shadow: 0 4px 24px rgba(255, 65, 65, 0.08);
+            // background: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            text-align: left;
+
+            .quote {
+                font-size: 5rem;
+                position: absolute;
+                opacity: 0.2;
+                color: $hover-color;
+                line-height: 1;
+            }
+
+            .para {
+                flex: 1;
+
+                p {
+                    color: $btn-color;
+                    letter-spacing: 0.3px;
+                    line-height: 1.6;
+                    font-size: 0.95rem;
+                    margin-top: 50px;
+                }
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                border-top: 1px solid rgba(230, 57, 71, 0.12);
+                padding-top: 0.8rem;
+                margin-top: auto;
+
+                .img img {
+                    width: 48px;
+                    border-radius: 50%;
+                    border: 2px solid rgba(230, 57, 71, 0.3);
+                }
+
+                .user-info {
+                    h4 {
+                        color: $hover-color;
+                        font-size: 1rem;
+                        letter-spacing: 0.4px;
+                    }
+
+                    p {
+                        color: lighten($btn-color, 30%);
+                        margin-top: 3px;
+                        font-size: 0.82rem;
+                    }
                 }
             }
         }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .testimonial {
+        .mainn {
+            position: relative;
+            left: -500%;
+        }
+
+        .main {
+            width: 800%;
+        }
+    }
+}
+
 
 .blog-section {
     padding: 60px 50px 20px;
@@ -674,24 +769,11 @@ header {
     .blog-btn {
         @include btn();
         margin-bottom: 2rem;
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-
-        svg {
-            margin-left: 8px;
-            vertical-align: middle;
-            transition: transform 0.3s ease;
-            width: 16px;
-            fill: $hover-color;
-        }
+        margin-top: 0.5rem;
 
         &:hover {
-            transform: translateX(2px);
-
-            svg {
-                transform: translateX(2px);
-            }
+            opacity: 0.9;
+            letter-spacing: 1px;
         }
     }
 

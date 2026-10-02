@@ -14,3 +14,20 @@ for (let i = 0; i < 10; i++) {
   });
 }
 
+let testimonialTrack = document.querySelector(".main");
+
+gsap.to(testimonialTrack, {
+  x: "-50%",
+  duration: 16,
+  ease: "linear",
+  repeat: -1,
+});
+
+let testimonialTrackk = document.querySelector(".mainn");
+
+gsap.to(testimonialTrackk, {
+  x: "50%",
+  duration: 16,
+  ease: "linear",
+  repeat: -1,
+});
