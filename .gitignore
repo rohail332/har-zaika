@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# SCSS compiled output
+# dist/main.css
+# dist/recipes.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
