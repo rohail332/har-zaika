@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "i18next": "^26.4.2"
+  },
+  "name": "har-zaika",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "animation.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohail332/har-zaika.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rohail332/har-zaika/issues"
+  },
+  "homepage": "https://github.com/rohail332/har-zaika#readme"
+}
